@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Travel</title>
+    <style>
+        * {
+            margin: 10px;
+        }
+
+        .header-container {
+            display: flex;
+            background-color: #cdcdcd;
+            align-items: center;
+            font-size: 10pt;
+        }
+
+        .nav-container {
+            float: left;
+            margin-left: auto;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            margin-right: 15px;
+            list-style-type: none;
+            font-size: larger;
+        }
+
+        .section-content-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .section-content {
+            border-radius: 2%;
+            width: 60%;
+        }
+
+        .image-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-comment {
+            display: flex;
+            padding-left: 25%;
+            padding-right: 25%;
+            margin-bottom: 3%;
+            margin-top: 0%;
+        }
+
+        .content-container {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .form-container {
+            background-color: #e5f1eb;
+            width: 35%;
+            border-radius: 2%;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .box {
+            width: 30%;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-container">
+        <section class="logo-icon">
+            <img src="img/balonudara.png" alt="" width="30px">
+        </section>
+        <section>
+            <h1>Go Travel</h1>
+        </section>
+        <section class="nav-container">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Our Page</a></li>
+                <li><a href="">Call Us</a></li>
+            </ul>
+        </section>
+    </header>
+    <hr />
+
+    <section class="section-container">
+        <header style="text-align: center;">
+            <h1>Wujudkan perjalanan menyenangkan dengan Go Travel</h1>
+            <h3>Ayo Mulai Perpetualang!</h3>
+        </header>
+
+        <div class="section-content-container">
+            <div class="section-content">
+                <div class="image-content">
+                    <img src="img/paket wisata bromo 2013.jpg" alt="img" width="50%">
+                </div>
+                <div class="comment-container">
+                    <p
+                        style="font-size: x-large; font-style: italic; color: gray; text-align: center; margin-bottom: 0%;">
+                        "Liburan menjadi
+                        menyenangkan
+                        bersama Go Travel"</p>
+                    <div class="user-comment">
+                        <div class="user"><img src="img/balonudara.png" alt="" width="50px"></div>
+                        <div class="user">
+                            <h2>User</h2>
+                            <p>Karyawan Swasta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <h1>Selamat datang di Go Travel</h1>
+                    <p style="font-size: larger;"> panduan perjalanan Anda yang tak tergantikan!
+                        Temukan destinasi impian, rute wisata menarik, dan penawaran eksklusif untuk
+                        petualangan tak terlupakan. Mulailah perjalanan Anda sekarang dan temukan keindahan
+                        dunia dengan mudah bersama Go Travel</p>
+                    <br>
+                    <h1>Promo Spesial Ramadhan</h1>
+                    <img src="img/Spesial Ramadhan.png" alt="" width="100%">
+                </div>
+                <br>
+            </div>
+
+            <div class="form-container">
+                <div>
+                    <h2 style="text-align: center;">Reservasi</h2>
+                    <p style="font-size: larger;">Info resevasi lebih lanjut akan dihubungi oleh admin melalui email
+                        yang telah tercantum</p>
+                </div>
+                <br>
+                <div>
+                    <form method="post" action="submit.php">
+                        <div class="form-group">
+                            <label for="name" style="font-size: larger;">Nama Anda:</label>
+                            <div class="input-form ">
+                                <input type="text" name="name" id="name" placeholder="Nama Lengkap Anda" required
+                                    style="width: 300px; height: 30px; border: black 10 10px; border-radius: 4px; margin-left: 0%; margin-top: 0%;">
+                            </div>
+                            <label for="name" style="font-size: larger;">Email:</label>
+                            <div class="input-form">
+                                <input type="email" name="email" id="email" placeholder="user@gmail.com" required
+                                    style="width: 300px; height: 30px; border: black 10 10px; border-radius: 4px; margin-left: 0%;margin-top: 0%;">
+                            </div>
+                            <label for="name" style="font-size: larger;">Pilih Perjalanan</label>
+                            <div class="input-form">
+                                <select name="dest" id="dest"
+                                    style="width: 310px; height: 30px; border: black 10 10px; border-radius: 4px; margin-left: 0%;margin-top: 0%;">
+                                    <option value="">pilihanmu</option>
+                                    <option value="Dalam Negeri">Dalam Negeri</option>
+                                    <option value="Luar Negeri">Luar Negeri</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="offset-4 col-8">
+                                <button name="submit" type="submit" class="btn-primary"
+                                    style="width: 310px; height: 30px; border: black 10 10px; border-radius: 4px; margin-left: 0%; font-size: larger;">Kirim</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="package-container">
+        <header>
+            <h1>Rekomedasi Destinasi Wisata Dalam Negeri</h1>
+        </header>
+
+        <div id="container">
+            <div class="box 1">
+                <div>
+                    <h2 style="margin-bottom: 0%;">Bali</h2>
+                </div>
+                <div class="image-content">
+                    <img src="img/18.jpg" alt="" width="100%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <p style="font-size: smaller;">Bali adalah surga tropis yang menawarkan pantai-pantai berpasir putih
+                        yang menakjubkan, hutan-hutan hijau yang lebat, dan budaya yang kaya. Nikmati aktivitas selancar
+                        di Pantai Kuta, jelajahi keindahan alam di Ubud, dan saksikan matahari terbenam yang memukau di
+                        Pantai Uluwatu.</p>
+                </div>
+            </div>
+
+            <div class="box 2">
+                <div>
+                    <h2 style="margin-bottom: 0%; margin-left: 10%;">Raja Ampat</h2>
+                </div>
+                <div class="image-content">
+                    <img src="img/19.jpg" alt="" width="80%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <p style="font-size: smaller; margin-left: 10%;">Raja Ampat adalah surga bagi pecinta snorkeling dan
+                        diving di Indonesia. Terletak di Papua Barat, kepulauan ini menawarkan keindahan bawah laut yang
+                        luar biasa, Di sini, Anda dapat menikmati pengalaman menyelam yang tak tertandingi di antara
+                        keindahan alam yang masih alami dan terjaga.</p>
+                </div>
+            </div>
+
+            <div class="box 3">
+                <div>
+                    <h2 style="margin-bottom: 0%; margin-left: 5%;">Kawah Putih</h2>
+                </div>
+                <div class="image-content">
+                    <img src="img/6.jpg" alt="" width="90%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <p style="font-size: smaller; margin-left: 5%;">Kawah Putih terkenal dengan panorama alam yang
+                        memesona serta udara yang segar, menjadikannya destinasi favorit bagi para pengunjung yang ingin
+                        bersantai sambil menikmati keindahan alam. Terletak di kawasan Ciwidey, Jawa Barat, Indonesia.
+                        Wisatawan dapat menikmati pemandangan dramatis dari danau yang dikelilingi oleh hutan pegunungan
+                        dan tebing berbatu. </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <header>
+            <h1>Rekomedasi Destinasi Wisata Luar Negeri</h1>
+        </header>
+
+        <div id="container">
+            <div class="box 1">
+                <div class="image-content">
+                    <img src="img/jepang.jpg" alt="" width="100%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <h2 style="margin-bottom: 0%;">Jepang</h2>
+                    <p style="font-size: smaller;">Jepang menawarkan pengalaman wisata yang beragam, memadukan keindahan
+                        alam, warisan budaya yang kaya, dan teknologi modern.
+                        Jepang adalah destinasi wisata yang menarik bagi semua jenis pelancong.</p>
+                </div>
+            </div>
+
+            <div class="box 2">
+                <div class="image-content">
+                    <img src="img/swiss.jpg" alt="" width="95%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <h2 style="margin-bottom: 0%;">Switzerland</h2>
+                    <p style="font-size: smaller;">Swiss menawarkan pemandangan alam memukau, seperti
+                        Pegunungan Alpen dan danau yang jernih. Nikmati kegiatan luar ruangan seperti hiking dan ski,
+                        jelajahi kota-kota bersejarah, dan cicipi kekayaan kuliner Swiss seperti keju dan cokelat.
+                        Dengan pesona alam yang menakjubkan dan budaya yang kaya, Swiss adalah destinasi yang tak
+                        terlupakan bagi wisatawan.</p>
+                </div>
+            </div>
+
+            <div class="box 3">
+                <div class="image-content">
+                    <img src="img/itali.jpeg" alt="" width="110%" style="margin-top: 0%;">
+                </div>
+                <div>
+                    <h2 style="margin-bottom: 0%;">Italia</h2>
+                    <p style="font-size: smaller;">Italia menawarkan pengalaman wisata yang kaya dengan
+                        warisan budaya, pemandangan indah, dan makanan lezat. Jelajahi kota-kota bersejarah seperti
+                        Rome, Venice, dan Florence, sambil menikmati keindahan pedesaan Tuscany. Nikmati kuliner Italia
+                        yang terkenal, dari pasta hingga gelato. It's a feast for the senses!i</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <br>
+        <header>
+            <h1>Kenapa Memilih Go Travel?</h1>
+        </header>
+        <div id="container">
+            <div class="box 1">
+                <div class="image-content">
+                    <img src="img/logo1.png" alt="" width="30%" style="margin-top: 0%;">
+                    <div>
+                        <h3>Destinasi Perjalanan Beragam</h3>
+                        <p>Go Travel menyediakan beragam destinasi wisata perjalanan baik dalam negeri maupun
+                            luar negeri</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box 1">
+                <div class="image-content">
+                    <img src="img/logo2.png" alt="" width="30%" style="margin-top: 0%;">
+                    <div>
+                        <h3>Keamanan pembayaran</h3>
+                        <p>Pembayaran secara digital terjamin oleh Go Travel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box 1">
+                <div class="image-content">
+                    <img src="img/logo3.png" alt="" width="30%" style="margin-top: 0%;">
+                    <div>
+                        <h3>Opsi Pemesanan Fleksibel</h3>
+                        <p>Opsi pemesanan yang fleskibel memudahkan pengguna memesan perjalanan kapan pun dan dimana pun
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #9292b2;">
+        <div class="row footer bg-light">
+            <div class="col">
+                <p><a class="social-icon" href="https://www.instagram.com/dhiadn.r"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+            <div class="col">
+                <p class="text-center">Copyright &copy; 2023</p>
+            </div>
+            <div class="col">
+                <p class="text-center">Powered by: <a href="www.linkedin.com/in/dinda-nurfadhia-73abb0249">Dinda
+                        Nurfadhia</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
